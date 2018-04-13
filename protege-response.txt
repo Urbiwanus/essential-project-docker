@@ -1,0 +1,25 @@
+# Mon Jul 24 03:51:10 BST 2017
+# Replay feature output
+# ---------------------
+# This file was built by the Replay feature of InstallAnywhere.
+# It contains variables that were set by Panels, Consoles or Custom Code.
+
+
+
+#Install
+#-------
+-fileOverwrite_/opt/Protege_3.5/Uninstall_Protege 3.5/Uninstall Protege 3.5.lax=Yes
+-fileOverwrite_/opt/Protege_3.5/Protege.lax=Yes
+-fileOverwrite_/opt/Protege_3.5/protege.jar=Yes
+-fileOverwrite_/opt/Protege_3.5/looks.jar=Yes
+-fileOverwrite_/opt/Protege_3.5/unicode_panel.jar=Yes
+-fileOverwrite_/opt/Protege_3.5/Protege.ico=Yes
+-fileOverwrite_/opt/Protege_3.5/log4j.xml=Yes
+-fileOverwrite_/opt/Protege_3.5/logging.properties=Yes
+-fileOverwrite_/opt/Protege_3.5/licensing.txt=Yes
+-fileOverwrite_/opt/Protege_3.5/readme.txt=Yes
+-fileOverwrite_/opt/Protege_3.5/protege.properties=Yes
+-fileOverwrite_/opt/Protege_3.5/protege_text.properties=Yes
+-fileOverwrite_/opt/Protege_3.5/run_protege_server.sh=Yes
+-fileOverwrite_/opt/Protege_3.5/run_protege.sh=Yes
+-fileOverwrite_/opt/Protege_3.5/shutdown_protege_server.sh=Yes

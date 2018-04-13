@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+<com.izforge.izpack.panels.HTMLHelloPanel id="hellopanel"/>
+<com.izforge.izpack.panels.HTMLInfoPanel id="infopanel"/>
+<com.izforge.izpack.panels.LicencePanel id="licencepanel"/>
+<com.izforge.izpack.panels.ImgPacksPanel id="packspanel">
+<pack index="0" name="Update Scripts" selected="true"/>
+<pack index="1" name="Viewer Script" selected="true"/>
+<pack index="2" name="Import Utility Script" selected="true"/>
+<pack index="3" name="Widgets" selected="true"/>
+<pack index="4" name="Viewer" selected="true"/>
+<pack index="5" name="Repository" selected="true"/>
+<pack index="6" name="Server" selected="true"/>
+<pack index="7" name="Essential Server Service" selected="true"/>
+<pack index="8" name="Integration Tab" selected="true"/>
+<pack index="9" name="Sample Integration Data" selected="true"/>
+<pack index="10" name="Snapshot Tab" selected="true"/>
+<pack index="11" name="Update Tab" selected="true"/>
+<pack index="12" name="Import Utility" selected="true"/>
+</com.izforge.izpack.panels.ImgPacksPanel>
+<com.izforge.izpack.panels.UserInputPanel id="Plugins">
+<userInput>
+<entry key="PROTEGE_HOME" value="/root/Protege_3.5"/>
+<entry key="TOMCAT_HOME" value="/usr/local/tomcat/webapps/"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.TargetPanel id="Repository">
+<installpath>/opt/Essential Architecture Manager</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.TargetPanel id="NoRepository">
+<installpath>/opt/Essential Architecture Manager</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.UserInputPanel id="ImportUtility">
+<userInput>
+<entry key="IMPORT_UTILITY_HOME" value="/var/lib/tomcat8/webapps"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="ServerThings">
+<userInput>
+<entry key="SERVER_HOME" value="/root/Protege_3.5/examples/server"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.SummaryPanel id="summarypanel"/>
+<com.izforge.izpack.panels.InstallPanel id="installpanel"/>
+<com.izforge.izpack.panels.FinishPanel id="finishpanel"/>
+</AutomatedInstallation>
