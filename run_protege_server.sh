@@ -45,7 +45,7 @@ MAX_MEMORY=-Xmx500M
 HEADLESS=-Djava.awt.headless=true
 CODEBASE_URL=file:/root/Protege_3.5/protege.jar
 CODEBASE=-Djava.rmi.server.codebase=$CODEBASE_URL
-HOSTNAME_PARAM=-Djava.rmi.server.hostname=eam
+HOSTNAME_PARAM=-Djava.rmi.server.hostname=localhost
 TX="-Dtransaction.level=READ_COMMITTED"
 LOG4J_OPT="-Dlog4j.configuration=file:log4j.xml"
 
@@ -54,7 +54,7 @@ OPTIONS="$MAX_MEMORY $HEADLESS $CODEBASE $HOSTNAME_PARAM ${TX} ${LOG4J_OPT}"
 #
 # Instrumentation debug, delay simulation,  etc
 #
-#PORTOPTS="-Dprotege.rmi.server.port=5200 -Dprotege.rmi.registry.port=5100"
+PORTOPTS="-Dprotege.rmi.server.port=5200 -Dprotege.rmi.registry.port=5100"
 #DEBUG_OPT="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"
 
 OPTIONS="${OPTIONS} ${PORTOPTS} ${DEBUG_OPT}"
@@ -66,7 +66,7 @@ OPTIONS="${OPTIONS} ${PORTOPTS} ${DEBUG_OPT}"
 # SAVE_INTERVAL=-saveIntervalSec=120
 # ------------------- Cmd Options -------------------
 
-METAPROJECT=examples/server/metaproject.pprj
+METAPROJECT=/data/metaproject.pprj
 
-$JAVA_PATH/rmiregistry -J-Djava.class.path=$CLASSPATH&
+$JAVA_PATH/rmiregistry -J-Djava.class.path=$CLASSPATH 5100& 
 $JAVA_PATH/java -cp $CLASSPATH $TX $OPTIONS $MAINCLASS $SAVE_INTERVAL $METAPROJECT

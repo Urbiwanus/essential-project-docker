@@ -1,0 +1,227 @@
+; Tue Apr 17 21:58:52 CEST 2018
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([metaproject_Class0] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Csongor Nyulas")
+	(password "fc31e1e527224b8819358c8c7de26db0")
+	(salt "f31290896d4576db"))
+
+([metaproject_Class1] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Samson Tu")
+	(password "fe83f7198cae4ed1e9065cbc9d04b33c")
+	(salt "cb67da39cf045f47"))
+
+([metaproject_Class10000] of  ServerAppliedOperation
+
+	(description "The operation of shutting down the server.")
+	(name "ShutdownServer"))
+
+([metaproject_Class10001] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Dilvan Moreira")
+	(password "bda0d06e2e6b6516c73cbf33035cd1a0")
+	(salt "3071102d65b0b679"))
+
+([metaproject_Class2] of  ProjectAppliedOperation
+
+	(description "The operation of displaying the project in the project list.\n\nThis is used to control the projects displayed when a user connects to a server.")
+	(name "DisplayInProjectList"))
+
+([metaproject_Class20000] of  ServerAppliedOperation
+
+	(description "This  operation allows a user to make alterations to his credentials.  This privilege should probably only be  used by fake users representing server processes.")
+	(name "Delegate"))
+
+([metaproject_Class20003] of  Group
+
+	(description "The group of adminsitrators of the Protege server.")
+	(member
+		[metaproject_Class20008]
+		[metaproject_Class30001])
+	(name "AdminGroup"))
+
+([metaproject_Class20004] of  ServerAppliedOperation
+
+	(description "A super-right: a user who has this right can kill other users' sessions, stop and start server projects without having these rights set for each ptoject individually.")
+	(name "AdministerServer"))
+
+([metaproject_Class20005] of  ServerAppliedOperation
+
+	(description "The operation of killing another user's session.")
+	(name "KillOtherUserSession"))
+
+([metaproject_Class20006] of  ServerAppliedOperation
+
+	(description "The operation of starting a (previously stopped) server project.")
+	(name "StartRemoteProject"))
+
+([metaproject_Class20007] of  ServerAppliedOperation
+
+	(description "The operation of stopping/closing a running server project.")
+	(name "StopRemoteProject"))
+
+([metaproject_Class20008] of  User
+
+	(description "A admin user that can perform adminisitrative operations on the Protege server.")
+	(group
+		[metaproject_Instance_0]
+		[metaproject_Class20003])
+	(name "Admin")
+	(password "4124fa220a05fc945c56761c02ad9736")
+	(salt "23bafb64db60bfd1"))
+
+([metaproject_Class20009] of  Server
+
+	(allowedGroupOperation
+		[metaproject_Class20010]
+		[metaproject_Class30003])
+	(description "The server on which the policies apply.\nCurrent implementaion does not take into account the hostname, so all the policies (allowed group operations) are applied to this one instance.")
+	(name "MyServer"))
+
+([metaproject_Class20010] of  GroupOperation
+
+	(allowedGroup [metaproject_Class20003])
+	(allowedOperation
+		[metaproject_Class20004]
+		[metaproject_Class20005]
+		[metaproject_Class20006]
+		[metaproject_Class20007]
+		[metaproject_Class10000]))
+
+([metaproject_Class3] of  GroupOperation
+
+	(allowedGroup [metaproject_Instance_0])
+	(allowedOperation [metaproject_Class2]))
+
+([metaproject_Class30000] of  GroupAppliedOperation
+
+	(description "The operation of adding or removing users to a group. (not enforced)")
+	(name "EditGroup"))
+
+([metaproject_Class30001] of  User
+
+	(group
+		[metaproject_Instance_0]
+		[metaproject_Class30002]
+		[metaproject_Class20003])
+	(name "webprotege")
+	(password "f7bcce407455edd3befd66e6405da28d")
+	(salt "574c25cbabe1feed"))
+
+([metaproject_Class30002] of  Group
+
+	(member [metaproject_Class30001])
+	(name "WebProtegeGroup"))
+
+([metaproject_Class30003] of  GroupOperation
+
+	(allowedGroup [metaproject_Class30002])
+	(allowedOperation [metaproject_Class20000]))
+
+([metaproject_Class40000] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class3])
+	(annotationProject [metaproject_Class40001])
+	(description "Docker based EAM")
+	(location "/repo/essential_baseline_v611.pprj")
+	(name "EAM")
+	(owner [metaproject_Class20008])
+	(policyModifiableByClient TRUE))
+
+([metaproject_Class40001] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class3])
+	(location "/repo/annotation_essential_baseline_v611.pprj")
+	(name "EAM Annotations")
+	(policyModifiableByClient TRUE))
+
+([metaproject_Instance_0] of  Group
+
+	(description "This group is intended to represent all the users.\n\nNewly created users are added to this group by default.")
+	(member
+		[metaproject_Instance_10002]
+		[metaproject_Instance_10003]
+		[metaproject_Instance_10004]
+		[metaproject_Instance_10005]
+		[metaproject_Instance_10006]
+		[metaproject_Instance_10007]
+		[metaproject_Class0]
+		[metaproject_Class1]
+		[metaproject_Class10001]
+		[metaproject_Class20008]
+		[metaproject_Class30001])
+	(name "World"))
+
+([metaproject_Instance_10002] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Guest")
+	(password "d376e3cdc24b4fdfbe012b28b7114d46")
+	(salt "db699848b1a45b2c"))
+
+([metaproject_Instance_10003] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Jennifer Vendetti")
+	(password "c4985f0ea03cd107a973590af106d667")
+	(salt "abe3c5a657a429b3"))
+
+([metaproject_Instance_10004] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Natasha Noy")
+	(password "5255d56b90b79cdd93acd5894ee55709")
+	(salt "8b2c9745dd21d0a9"))
+
+([metaproject_Instance_10005] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Ray Fergerson")
+	(password "2f659e40c792b01f6caa9d4fa3ca99c6")
+	(salt "57d803513a2f468e"))
+
+([metaproject_Instance_10006] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Tania Tudorache")
+	(password "9c83beacd15689a57a2c993f5b0a570a")
+	(salt "391cfea10ef1406a"))
+
+([metaproject_Instance_10007] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Timothy Redmond")
+	(password "af10c84508bd08042aad6ea1d88c6206")
+	(salt "5dd198d580069580"))
+
+([metaproject_Instance_10008] of  GroupOperation
+
+	(allowedGroup [metaproject_Instance_0])
+	(allowedOperation
+		[nci_metaproject_Instance_60009]
+		[nci_metaproject_Instance_60010]))
+
+([nci_metaproject_Instance_60009] of  ProjectAppliedOperation
+
+	(description "The operation of reading an ontology project.\n\nThis controls who can open a remote project.")
+	(name "Read"))
+
+([nci_metaproject_Instance_60010] of  ProjectAppliedOperation
+
+	(description "The operation of writing to an ontology project.\n\n(Enforcement not implemented yet)")
+	(name "Write"))
+
+([Trash] of  ProjectCollection
+
+	(name "Trash"))

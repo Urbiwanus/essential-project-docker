@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+	 <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	 <!ENTITY kb 'http://protege.stanford.edu/kb#'>
+	 <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	 xmlns:kb="&kb;"
+	 xmlns:rdfs="&rdfs;">
+<kb:AnnotationStatus rdf:about="&kb;Active"
+	 kb:description="Active"
+	 rdfs:label="Active"/>
+<kb:ChangeStatus rdf:about="&kb;Approved"
+	 kb:description="Approved"
+	 rdfs:label="Approved"/>
+<kb:AnnotationStatus rdf:about="&kb;Inactive"
+	 kb:description="Inactive"
+	 rdfs:label="Inactive"/>
+<kb:ChangeStatus rdf:about="&kb;Proposed"
+	 kb:description="Proposed"
+	 rdfs:label="Proposed"/>
+<kb:ChangeStatus rdf:about="&kb;Rejected"
+	 kb:description="Rejected"
+	 rdfs:label="Rejected"/>
+<kb:Status rdf:about="&kb;Under_review"
+	 kb:description="Under review"
+	 rdfs:label="Under review"/>
+</rdf:RDF>
