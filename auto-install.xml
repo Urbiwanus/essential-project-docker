@@ -32,7 +32,7 @@
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.UserInputPanel id="ImportUtility">
 <userInput>
-<entry key="IMPORT_UTILITY_HOME" value="/var/lib/tomcat8/webapps"/>
+	<entry key="IMPORT_UTILITY_HOME" value="/usr/local/tomcat/webapps"/>
 </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.UserInputPanel id="ServerThings">
