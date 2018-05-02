@@ -6,10 +6,10 @@ This is an example how to run EAS inside docker in server mode
 
 **This project is not production ready!!!**
 
-**PR are welcome** 
+**PR are welcome**
 
-## Prerequisite 
-- Latest docker 
+## Prerequisite
+- Latest docker
 - Protege 3.5 EAM Client see https://enterprise-architecture.org/documentation/doc-installation/65-multiuser-install-guide (Section *Client Installation* )
 
 
@@ -17,16 +17,16 @@ This is an example how to run EAS inside docker in server mode
 
 ### Build
 
-``` 
-docker build -t eam .
+```
+docker build -t local/eam .
 ```
 
-### Run 
+### Run
 ```
-docker run -d -p 8080:8080 --rm  -p5200:5200 -p5100:5100 -heam eam -heam eam
+docker run -d -p 8080:8080 --rm  -p5200:5200 -p5100:5100 -h eam local/eam
 ````
 
-### Connect 
+### Connect
 
 #### Viewer
 http://localhost:8080/essential_viewer
