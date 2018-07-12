@@ -66,7 +66,7 @@ OPTIONS="${OPTIONS} ${PORTOPTS} ${DEBUG_OPT}"
 # SAVE_INTERVAL=-saveIntervalSec=120
 # ------------------- Cmd Options -------------------
 
-METAPROJECT=/data/metaproject.pprj
+METAPROJECT=/opt/essentialAM/server/metaproject.pprj
 
 $JAVA_PATH/rmiregistry -J-Djava.class.path=$CLASSPATH 5100& 
 $JAVA_PATH/java -cp $CLASSPATH $TX $OPTIONS $MAINCLASS $SAVE_INTERVAL $METAPROJECT
