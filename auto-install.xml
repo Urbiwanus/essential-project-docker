@@ -19,26 +19,26 @@
 <pack index="12" name="Import Utility" selected="true"/>
 </com.izforge.izpack.panels.ImgPacksPanel>
 <com.izforge.izpack.panels.UserInputPanel id="Plugins">
-<userInput>
-<entry key="PROTEGE_HOME" value="/root/Protege_3.5"/>
-<entry key="TOMCAT_HOME" value="/usr/local/tomcat/webapps/"/>
-</userInput>
+    <userInput>
+        <entry key="PROTEGE_HOME" value="/root/Protege_3.5"/>
+        <entry key="TOMCAT_HOME" value="/usr/local/tomcat/webapps/"/>
+    </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.TargetPanel id="Repository">
-<installpath>/opt/Essential Architecture Manager</installpath>
+    <installpath>/opt/essentialAM</installpath>
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.TargetPanel id="NoRepository">
-<installpath>/opt/Essential Architecture Manager</installpath>
+    <installpath>/opt/essentialAM</installpath>
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.UserInputPanel id="ImportUtility">
-<userInput>
-	<entry key="IMPORT_UTILITY_HOME" value="/usr/local/tomcat/webapps"/>
-</userInput>
+    <userInput>
+        <entry key="IMPORT_UTILITY_HOME" value="/usr/local/tomcat/webapps"/>
+    </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.UserInputPanel id="ServerThings">
-<userInput>
-<entry key="SERVER_HOME" value="/root/Protege_3.5/examples/server"/>
-</userInput>
+    <userInput>
+        <entry key="SERVER_HOME" value="/opt/essentialAM/server"/>
+    </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.SummaryPanel id="summarypanel"/>
 <com.izforge.izpack.panels.InstallPanel id="installpanel"/>

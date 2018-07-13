@@ -27,8 +27,8 @@ RUN chmod u+x install_protege_3.5.bin \
 RUN rm ./install_protege_3.5.bin
 
 # Copy data & startup scripts
-COPY data/* /data/
-COPY repo/* /repo/
+COPY server/* /opt/essentialAM/server/
+COPY repo/* /opt/essentialAM/
 COPY startup.sh run_protege_server_fix.sh /
 
 #Some Java ENV

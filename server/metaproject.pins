@@ -1,0 +1,175 @@
+; Wed Jul 11 20:59:12 CDT 2018
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([metaproject_Class0] of  Group
+
+	(member [metaproject_Class20008])
+	(name "Architects")
+	(policyModifiableByClient TRUE))
+
+([metaproject_Class10000] of  ServerAppliedOperation
+
+	(description "The operation of shutting down the server.")
+	(name "ShutdownServer"))
+
+([metaproject_Class10005] of  GroupOperation
+
+	(allowedGroup [metaproject_Class0])
+	(allowedOperation
+		[metaproject_Class20006]
+		[metaproject_Class20007]
+		[metaproject_Class30000]
+		[metaproject_Class2]
+		[nci_metaproject_Instance_60009]
+		[nci_metaproject_Instance_60010]))
+
+([metaproject_Class10006] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class10005])
+	(annotationProject [metaproject_Class40000])
+	(location "/opt/essentialAM/essential_baseline_v62.pprj")
+	(name "Collaborative Baseline")
+	(policyModifiableByClient TRUE))
+
+([metaproject_Class2] of  ProjectAppliedOperation
+
+	(description "The operation of displaying the project in the project list.\n\nThis is used to control the projects displayed when a user connects to a server.")
+	(name "DisplayInProjectList"))
+
+([metaproject_Class20000] of  ServerAppliedOperation
+
+	(description "This  operation allows a user to make alterations to his credentials.  This privilege should probably only be  used by fake users representing server processes.")
+	(name "Delegate"))
+
+([metaproject_Class20003] of  Group
+
+	(description "The group of adminsitrators of the Protege server.")
+	(member
+		[metaproject_Class20008]
+		[metaproject_Class30001])
+	(name "AdminGroup"))
+
+([metaproject_Class20004] of  ServerAppliedOperation
+
+	(description "A super-right: a user who has this right can kill other users' sessions, stop and start server projects without having these rights set for each ptoject individually.")
+	(name "AdministerServer"))
+
+([metaproject_Class20005] of  ServerAppliedOperation
+
+	(description "The operation of killing another user's session.")
+	(name "KillOtherUserSession"))
+
+([metaproject_Class20006] of  ServerAppliedOperation
+
+	(description "The operation of starting a (previously stopped) server project.")
+	(name "StartRemoteProject"))
+
+([metaproject_Class20007] of  ServerAppliedOperation
+
+	(description "The operation of stopping/closing a running server project.")
+	(name "StopRemoteProject"))
+
+([metaproject_Class20008] of  User
+
+	(description "A admin user that can perform adminisitrative operations on the Protege server.")
+	(group
+		[metaproject_Class20003]
+		[metaproject_Instance_0]
+		[metaproject_Class0])
+	(name "Admin")
+	(password "574187203a6762fb25b06341115df74c")
+	(salt "b11cdeaff396938a"))
+
+([metaproject_Class20009] of  Server
+
+	(allowedGroupOperation
+		[metaproject_Class20010]
+		[metaproject_Class30003])
+	(description "The server on which the policies apply.\nCurrent implementaion does not take into account the hostname, so all the policies (allowed group operations) are applied to this one instance.")
+	(hostName "localhost")
+	(name "MyServer"))
+
+([metaproject_Class20010] of  GroupOperation
+
+	(allowedGroup [metaproject_Class20003])
+	(allowedOperation
+		[metaproject_Class20004]
+		[metaproject_Class20005]
+		[metaproject_Class20006]
+		[metaproject_Class20007]
+		[metaproject_Class10000]))
+
+([metaproject_Class30000] of  GroupAppliedOperation
+
+	(description "The operation of adding or removing users to a group. (not enforced)")
+	(name "EditGroup"))
+
+([metaproject_Class30001] of  User
+
+	(group
+		[metaproject_Class20003]
+		[metaproject_Class30002]
+		[metaproject_Instance_0])
+	(name "webprotege")
+	(password "f7bcce407455edd3befd66e6405da28d")
+	(salt "574c25cbabe1feed"))
+
+([metaproject_Class30002] of  Group
+
+	(member [metaproject_Class30001])
+	(name "WebProtegeGroup"))
+
+([metaproject_Class30003] of  GroupOperation
+
+	(allowedGroup [metaproject_Class30002])
+	(allowedOperation [metaproject_Class20000]))
+
+([metaproject_Class40000] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class10005])
+	(location "/opt/essentialAM/annotation_essential_baseline_v62.pprj")
+	(name "Collaborative Baseline Annotations")
+	(policyModifiableByClient TRUE))
+
+([metaproject_Instance_0] of  Group
+
+	(description "This group is intended to represent all the users.\n\nNewly created users are added to this group by default.")
+	(member
+		[metaproject_Instance_10002]
+		[metaproject_Class20008]
+		[metaproject_Class30001])
+	(name "World"))
+
+([metaproject_Instance_10002] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Guest")
+	(password "6851f460e3f3bc2450a315108374dccf")
+	(salt "d92345b3fba2a63b"))
+
+([metaproject_Instance_10008] of  GroupOperation
+
+	(allowedGroup [metaproject_Instance_0])
+	(allowedOperation
+		[nci_metaproject_Instance_60009]
+		[metaproject_Class2]))
+
+([nci_metaproject_Instance_60009] of  ProjectAppliedOperation
+
+	(description "The operation of reading an ontology project.\n\nThis controls who can open a remote project.")
+	(name "Read"))
+
+([nci_metaproject_Instance_60010] of  ProjectAppliedOperation
+
+	(description "The operation of writing to an ontology project.\n\n(Enforcement not implemented yet)")
+	(name "Write"))
+
+([Trash] of  ProjectCollection
+
+	(name "Trash"))
